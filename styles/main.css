@@ -169,3 +169,13 @@ footer {
     grid-column: 1 / 2;
   }
 }
+
+.project-preview {
+  display: none;
+  text-align: left;
+  padding-top: 10px;
+}
+
+#projects-link.expanded .project-preview {
+  display: block;
+}

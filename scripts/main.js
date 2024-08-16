@@ -5,8 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
   infoBox.addEventListener("click", () => {
     infoBox.classList.toggle("expanded");
 
-    const isExpanded = infoBox.classList.contains("expanded");
+    additionalInfo.style.display = infoBox.classList.contains("expanded")
+      ? "block"
+      : "none";
+  });
 
-    additionalInfo.style.display = isExpanded ? "block" : "none";
+  const projectsLink = document.getElementById("projects-link");
+  const projectPreview = projectsLink.querySelector(".project-preview");
+
+  projectsLink.addEventListener("click", (e) => {
+    if (e.target.tagName !== "A") {
+      e.preventDefault();
+      projectsLink.classList.toggle("expanded");
+      projectPreview.classList.toggle("visible");
+    }
+  });
+
+  projectPreview.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      return;
+    }
   });
 });
