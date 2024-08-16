@@ -1,0 +1,40 @@
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  article {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+  }
+  
+  article h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  article p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      padding: 15px;
+    }
+  
+    article {
+      padding: 15px;
+    }
+  }
+  
