@@ -161,6 +161,16 @@ footer {
   background-color: #333;
   color: white;
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
 }
 
 /* Responsive Design */
