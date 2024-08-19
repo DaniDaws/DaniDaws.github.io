@@ -12,7 +12,10 @@
     <main>
       <section class="project-grid">
         <div class="project-card" id="nc-news">
-          <img src="./images/nc-news.png" alt="NC-News home page" />
+          <div class="project-images">
+            <img src="./images/nc-news.png" alt="NC-News home page" />
+            <img src="images/nc-news-dark.png" alt="NC-News in dark mode" />
+          </div>
           <h3>NC-News</h3>
           <div class="project-details">
             <p>
@@ -22,16 +25,16 @@
               downvotes using its back-end API. Users can also add comments
               about an article and toggle dark-mode on and off.
             </p>
-            <p>
-              <a href="https://danielle-nc-news.netlify.app/"
-                >Click here to visit the deployed website,
-              </a>
-              <a href="https://github.com/DaniDaws/be-nc-news"
-                >here to view the back-end on GitHub,
-              </a>
+            <p>This project showcases my ability to work with databases and to build using test driven development in the 
+    
+              <a href="https://github.com/DaniDaws/be-nc-news">
+                back-end</a>, and my consideration of accessibility and user-experience in the  
               <a href="https://github.com/DaniDaws/fe-nc-news"
-                >or here to see the front-end on GitHub!</a
-              >
+                >front-end.</a
+              ><br>
+              <a href="https://danielle-nc-news.netlify.app/"
+                >Click here to visit the deployed website!
+              </a>
             </p>
             <p>Tech Stack:</p>
             <ul>
@@ -106,6 +109,15 @@
       </section>
     </main>
     <footer></footer>
+
+
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
+
+
     <script src="scripts/loadHeaderFooter.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/projects.js"></script>
