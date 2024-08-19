@@ -38,6 +38,11 @@ nav ul li a {
   font-weight: bold;
 }
 
+.header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header-content {
   position: relative;
   background: url("../images/colorful-flowers.png") center/cover no-repeat;
@@ -172,10 +177,29 @@ footer {
 
 .project-preview {
   display: none;
-  text-align: left;
+  text-align: center;
   padding-top: 10px;
+  margin-right: 3%;
 }
 
 #projects-link.expanded .project-preview {
-  display: block;
+  display: inline-block;
+}
+
+.project-preview a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 5px 0;
+  padding-left: 2em;
+  position: relative;
+}
+
+.project-preview a::before {
+  content: "🌸";
+  font-size: 1.2rem;
+  color: #ff6f61;
+  margin-right: 10px;
 }
