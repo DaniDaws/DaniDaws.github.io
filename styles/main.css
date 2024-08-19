@@ -73,6 +73,34 @@ h2 {
   margin: 0;
 }
 
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  #theme-toggle {
+    width: 30px;
+  }
+}
+
 /* Grid Container and Items */
 .grid-container {
   display: grid;
@@ -171,6 +199,7 @@ footer img {
   height: 40px;
   width: auto;
   vertical-align: middle;
+  border-radius: 10%;
 }
 
 /* Responsive Design */
