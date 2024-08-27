@@ -28,6 +28,24 @@ article p {
   color: #555;
 }
 
+article ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+article ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+article ul li::marker {
+  color: #333;
+}
+
 @media (max-width: 768px) {
   main {
     padding: 15px;
@@ -240,4 +258,8 @@ article p {
 .github-button:active {
   background-color: #222;
   transform: translateY(0);
+}
+
+.cfg-kickstarter-info {
+  margin-top: 2%;
 }
