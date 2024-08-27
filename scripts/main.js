@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Handle the info box expansion
   const infoBox = document.querySelector(".item4");
   const additionalInfo = document.querySelector(".additional-info");
 
   if (infoBox && additionalInfo) {
     infoBox.addEventListener("click", () => {
       infoBox.classList.toggle("expanded");
-
       additionalInfo.style.display = infoBox.classList.contains("expanded")
         ? "block"
         : "none";
     });
   }
 
+  // Handle the projects link expansion
   const projectsLink = document.getElementById("projects-link");
   const projectPreview = projectsLink
     ? projectsLink.querySelector(".project-preview")
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Initialize dark mode toggle
   const initDarkModeToggle = () => {
     const toggleButton = document.getElementById("theme-toggle");
     const currentTheme = localStorage.getItem("theme") || "light";
@@ -61,4 +63,27 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(checkHeaderLoaded);
     }
   }, 100);
+
+  // Modal functionality for Kickstarter certificate
+  const modal = document.getElementById("certificateModal");
+  const certificateThumbnail = document.querySelector(".certificate-thumbnail");
+  const modalImg = document.getElementById("certificateImage");
+  const closeModal = document.getElementsByClassName("close")[0];
+
+  if (certificateThumbnail && modal && modalImg && closeModal) {
+    certificateThumbnail.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+
+    closeModal.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
 });
